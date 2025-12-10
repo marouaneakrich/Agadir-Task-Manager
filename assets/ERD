@@ -1,0 +1,20 @@
+erDiagram
+    USERS ||--o{ TASKS : "owns/creates"
+    
+    USERS {
+        int id PK "Primary Key, Auto-increment"
+        varchar name "User full name"
+        varchar email UK "Unique email address"
+        varchar password "Hashed password (bcrypt)"
+        timestamp created_at "Account creation date"
+    }
+    
+    TASKS {
+        int id PK "Primary Key, Auto-increment"
+        int user_id FK "Foreign Key to users.id"
+        varchar title "Task title (required)"
+        text description "Task description (optional)"
+        enum status "pending or done"
+        timestamp due_date "Task deadline"
+        timestamp created_at "Task creation date"
+    }

@@ -1,0 +1,39 @@
+graph TB
+    User((User/Citizen))
+    
+    subgraph "Agadir Task Manager System"
+        Register[Register Account]
+        Login[Login]
+        Logout[Logout]
+        CreateTask[Create Task]
+        ViewTasks[View All Tasks]
+        FilterTasks[Filter Tasks by Status]
+        UpdateTask[Update Task]
+        MarkDone[Mark Task as Done]
+        DeleteTask[Delete Task]
+        ViewDetails[View Task Details]
+    end
+    
+    User --> Regiaster
+    User --> Login
+    User --> Logout
+    User --> CreateTask
+    User --> ViewTasks
+    User --> FilterTasks
+    User --> UpdateTask
+    User --> MarkDone
+    User --> DeleteTask
+    User --> ViewDetails
+    
+    CreateTask --> ViewTasks
+    UpdateTask --> ViewTasks
+    MarkDone --> ViewTasks
+    DeleteTask --> ViewTasks
+    
+    style User fill:#3B82F6,stroke:#1E40AF,color:#fff
+    style Register fill:#10B981,stroke:#059669
+    style Login fill:#10B981,stroke:#059669
+    style CreateTask fill:#F59E0B,stroke:#D97706
+    style ViewTasks fill:#F59E0B,stroke:#D97706
+    style UpdateTask fill:#EF4444,stroke:#DC2626
+    style DeleteTask fill:#EF4444,stroke:#DC2626
