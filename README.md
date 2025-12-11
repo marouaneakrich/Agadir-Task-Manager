@@ -7,14 +7,14 @@ Allows users to register, log in, and manage tasks (create, view, update, delete
 
 ```
 / (root)
-├── backend/             # Express + PostgreSQL backend
+├── AGTM-Backend/             # Express + PostgreSQL backend
 │    ├── config/
 │    │     └── database.js
 │    ├── middleware/     # validation, auth etc.
 │    ├── routes/         # auth routes (register, login), task routes
 │    └── server.js       # main backend entry point
 │
-└── frontend/            # React Native app
+└── AGTM-Frontend/            # React Native app
      ├── src/
      │    ├── screens/   # RegisterScreen, LoginScreen, Dashboard, AddTask, TaskDetails,...
      │    ├── context/   # AuthContext, TaskContext
